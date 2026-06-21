@@ -378,9 +378,59 @@ z = 36
     #Set{}: unordered and immutable. Duplicates NOT OK, but add/remove ok
     #Tuple(): ordered and unchangeable. Duplicates OK. Faster
     # Dictionary: ordered and changeable || don't know about this yet
-
-car = ["BMW", "Toyota", "Honda", "Mercedes"]
+# List[]🟢
+# car = ["BMW", "Toyota", "Honda", "Mercedes"]
 # print(car[3]).  || [start:stop:end]
 
-for x in car:
-    print(x) 
+# for x in car:
+#     print(x) 
+
+# print(dir(car)). || this will show all the built in methods for list data type
+# print(help(car))  || this will discribe all the built in methods for list data type
+# print(len(car))
+
+# print("BMW" in car) || returns True if the value is found in the list
+# car.append("Audi") #|| adds an element to the end of the list
+# car.insert(1,"Lexus") #|| adds an element at the specified position
+# car.remove("Honda") #   || removes the first item with the specified value                      
+# car.remove("Lexus") #   || removes the first item with the specified value
+# print(car.count("BMW")) #   || returns the number of times the specified value appears in the list§
+# print(car)
+# List[] end🔴
+
+# set{}🟢
+color = {"Red", "Green", "Blue", "Yellow"}
+# color.pop()
+# color.remove("Red")
+# color.add("grey")
+# color.add("Red")
+# print("grey" in color)
+# print(color)
+# set{}end🔴
+
+#tuple()🟢
+# game = ("cricket", "football", "basketball", "durby")
+# print(dir(game))
+# print(help(game))
+# print(game.index("football"))
+# print(game.count("football"))
+
+#Shopping cart program
+foods = []
+prices = []
+total = 0
+while True:
+    food = input("Enter food to buy(q to quite): ")
+    if food.lower() == "q":
+        break
+    else:
+        price = float(input(f"Enter price of {food}: $"))
+        foods.append(food)
+        prices.append(price)
+print(f"---- YOUR FOOD CART HAS -----")
+for x in foods:
+    print(x, end=" ")
+for price in prices:
+    total += price
+print()
+print(f"Your total bill is ${round(total, 2)}")
