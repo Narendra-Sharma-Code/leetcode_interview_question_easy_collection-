@@ -416,21 +416,79 @@ color = {"Red", "Green", "Blue", "Yellow"}
 # print(game.count("football"))
 
 #Shopping cart program
-foods = []
-prices = []
-total = 0
-while True:
-    food = input("Enter food to buy(q to quite): ")
-    if food.lower() == "q":
-        break
-    else:
-        price = float(input(f"Enter price of {food}: $"))
-        foods.append(food)
-        prices.append(price)
-print(f"---- YOUR FOOD CART HAS -----")
-for x in foods:
-    print(x, end=" ")
-for price in prices:
-    total += price
-print()
-print(f"Your total bill is ${round(total, 2)}")
+# foods = []
+# prices = []
+# total = 0
+# while True:
+#     food = input("Enter food to buy(q to quite): ")
+#     if food.lower() == "q":
+#         break
+#     else:
+#         price = float(input(f"Enter price of {food}: $"))
+#         foods.append(food)
+#         prices.append(price)
+# print("---- YOUR FOOD CART HAS -----")
+# for x in foods:
+#     print(x, end=" ")
+# for price in prices:
+#     total += price
+# print()
+# print(f"Your total bill is ${round(total, 2)}")
+
+#2D collection = a collection of collections
+# foods = ["Pizza", "Burger", "Fries"]
+# veggies = ["Broccoli", "Spinach", "Carrots"]
+# drinks = ["Coke", "Pepsi", "Sprite"]
+
+# grocery_list = [foods, veggies, drinks]
+# print(grocery_list[0][1])
+# for x in grocery_list:
+#     for y in x:
+#         print(y,end=" ")
+#     print()
+
+#QUIZZ GAME🟢
+# questions = (("In India how many states are there"),
+#              ("How many bones are there is human body"),
+#              ("At what age a person is eligible for Driving License"),
+#              ("which is the hottest planet in solar system"))
+# options = (("12","34","45","26"),
+#            ("34","206","456","420"),
+#            ("10","15","18","24"),
+#            ("mercury","venus","earth","sun"))
+# answers = ("B","B", "C", "C")
+# score = 0
+# guesses = []
+# question_num = 0
+# for question in questions:
+#     print("--------------")
+#     print(question)
+#     for option in options[question_num]:
+#         print(option)
+
+#     guess = input("Enter answer as(A,B,C,D): ").upper()
+#     guesses.append(guess)
+#     if guess == answers[question_num]:
+#         score += 1
+#         print("CORRECT!")
+#     else:
+#         print("ICORRECT!")
+#         print(f"{answers[question_num]} is the Correct answer")
+#     question_num += 1
+
+# print("--------------")
+# print("RESULTS")
+# print("--------------")
+
+# print("Answers: ", end=" ")
+# for answer in answers:
+#     print(answer, end=" ")  
+
+# print()
+# print("Guesses: ", end=" ")
+# for guess in guesses:
+#     print(guess, end=" ")
+# score = int(score / len(questions) * 100)
+# print()
+# print(f"Your score is: {score}%")🔴
+
