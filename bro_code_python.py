@@ -8,6 +8,9 @@
 #Set = A collection of unique items that are unordered and unindexed, enclosed in curly braces
 #Dictionary = A collection of key-value pairs that are unordered, changeable, and indexed, enclosed in curly braces
 import math
+import random
+import time
+
 #Example of variables
 #string
 # name = "Bro Code"
@@ -351,7 +354,6 @@ z = 36
 
 #Python Countdown Program
 
-# import time
 # my_time = int(input("Enter time in seconds: "))
 # for x in range(my_time,0,-1):
 #     seconds = x % 60
@@ -491,4 +493,248 @@ color = {"Red", "Green", "Blue", "Yellow"}
 # score = int(score / len(questions) * 100)
 # print()
 # print(f"Your score is: {score}%")🔴
+
+#dictionary{}🟢
+#a collection of {key:value} pairs that are ordered, changeable and no duplicates
+# captials = {"USA":"Washington DC",
+#             "India":"New Delhi",           
+#             "Russia":"Moscow",
+#             "China":"Beijing",
+#             "Japan":"Tokyo"
+#             }
+# print(captials.get("USA"))
+# print(captials.get("India"))
+# if captials.get("Japan"):
+#     print("Japan is present in the dictionary")
+# else:
+#     print("Japan is not present in the dictionary")
+
+# captials.update({"Germany":"Berlin"})
+# captials.update({"USA":"New York"})
+# captials.pop("China")
+# captials.popitem()
+# captials.clear()
+# key = captials.keys()
+# print(key) 
+# for key in captials.keys():
+#     print(key)        
+
+# values =  captials.values()
+# print(values)
+
+# items = captials.items()
+# # print(items)
+# for key, value in captials.items():
+#     print(f"{key}: {value}")
+# 🔴
+
+#concession stand program 🟢
+# menu = {
+#     "pizza": 60.0,
+#     "brownie": 80,
+#     "popcorn": 150,
+#     "fries": 40,
+#     "soda": 30,
+#     "cold drink": 80,
+#     "burger": 100
+#     }
+
+# cart = []
+# total = 0
+# print("----------MENU----------")
+# for key,value in menu.items():
+#     print(f"{key:10}: {value:.2f}")
+# print("------------------------")
+
+# while True:
+#     food = input("Enter Your Order food item(q for quit): ").lower()
+#     if food == "q":
+#         break
+#     elif menu.get(food) is not None:
+#         cart.append(food)
+# print()
+# print("------Your Order---------")
+# for food in cart:
+#     total += menu.get(food)
+#     print(food, end=" | ")
+# print()
+# print(f"Total is: {total:.2f}")
+# 🔴
+    
+#Random Numbers 🟢
+
+
+# # numbers = random.randint(1,10)
+# low = 1
+# high = 1000
+# options = ("rock","paper", "scissors")
+# cards = [2,3,4,5,6,7,8,9,"J","Q","K","A"]
+
+# # numbers = random.randint(low,high)
+# # numbers = random.random()
+# option = random.choice(options)
+# random.shuffle(cards)
+# print(cards)
+# 🔴
+
+#random guess game 🟢
+# low = 1
+# high = 100
+# answer = random.randint(low,high)
+# guesses = 0
+# is_running = True
+
+# print("--Python Number Guessing Game--")
+# print(f"Guess a number between {low} and {high}")
+# while is_running:
+#     guess = input("Guess a number: ")
+#     if guess.isdigit():
+#         guess = int(guess)
+#         guesses += 1
+#         if guess not in range(low,high):
+#             print("Invalid guess")
+#         elif guess > answer:
+#             print("Too high,Try again!")
+#         elif guess < answer:
+#             print("Too low, Try again!")
+#         else:
+#             print("Correct Answer!!👍")
+#             print(f"You Took {guesses} tries to Crack thisss☠️")
+#             is_running = False
+#             # break
+#     else:
+#         print("Invalid Guess")
+# 🔴  
+
+# #Rock, Paper, Scissors Game🟢
+# options = ("rock", "paper", "scissors")
+# is_playing = True
+
+# while is_playing:
+#     player =  None
+#     computer = random.choice(options)
+#     print("---Python Rock | Paper | Scissors. Game--- ")
+    
+#     while player not in options:
+#         player = input(f"Enter your Choice: ").lower()
+
+#     print(f"Player: {player}")
+#     print(f"Computer: {computer}")
+#     if player == "rock" and computer == "paper":
+#         print("Congratsss You Win!!")
+#     elif player == "paper" and computer == "rock":
+#         print("Congratsss You Win!!")
+#     elif player == "scissors" and computer == "paper":
+#         print("Congratsss You Win!!")
+#     elif player == computer:
+#         print("WHooooooo it's a tie!!")
+#     else: 
+#         print("You lose, Bitchhhh!!")
+    
+#     respawn = input("You wanna Play again(y/n):").lower()
+#     if respawn != "y":
+#         is_playing = False
+# print("Thanks for playing this game, see you next time!!")
+# 🔴
+
+
+#Functions = a block of code that is executed only when it is called 🟢
+
+# def happ_birthday(name,age):
+#     print(f"Happy birthday to {name}")
+#     print(f"you are {age} year's old")
+# happ_birthday("BroCode", 26)🔴
+
+#return: statement used to end a function and send a result back to the caller 🟢
+# def candidate_name(first,last):
+#     first = first.capitalize()
+#     last = last.capitalize()
+#     return first + " " + last
+
+# full_name = candidate_name("narendra","sharma")
+# print(full_name)
+# print(candidate_name("Yellow","Flash"))🔴
+
+#default parameter = a parameter that assumes a default value if a value is not provided in the function call 🟢
+#make your function more flexible by allowing the user to specify only the parameters they want to change
+#1 positional argument 2. default argument 3. keyword argument 4. arbitrary 
+
+# def coupon(price,discount=0.037,tax=0.034):
+#     return price * (1-discount) * (1+ tax)
+# print(coupon(500,0.3,0.04))
+# print(coupon(300))
+
+# def count(end, start =10):
+#     for x in range(start,end+1):
+#         print(x)
+#         time.sleep(3)
+#     print("DONE!")
+# count(18,15)
+
+# print("Welcome to dice rolling simulator")
+# dice = input("roll the dice(Enter 'r' to roll): ") 
+# dice = dice.lower()
+# while dice == "r":
+#     print(f"You rolled a {random.randint(1,6)}")
+#     dice = input("roll the dice(Enter 'r' to roll): ")
+#     dice = dice.lower()
+# print("Thanks for playing this game, see you next time!!")
+
+#keyword argument = an argument proceded by an identififier. helps with readability. order of argument doesn't matter🟢
+
+# def student(name,std,div):
+#     print(f"Hello {name}, you are currently in {std}-{div}")
+# student("narendra",10,"A") ||positional argument
+# student(div="A", std= 10,name="Narendra") || keyword argument
+
+# def get_number(country,area,first,last):
+#     return f"{country}-{area}-{first}-{last}"
+# phone_num = get_number(first=702123, last= 12480, country=91, area=101)
+# print(phone_num)🔴
+
+# *args = allows you to pass multiple non-keyword arguments
+# **kwargs = allows you to pass multiple keyword arguments🟢
+# *unpacking operator
+# ------*args------
+# def get_arg(*nums):
+#     for num in nums:
+#         print(num, end=" ")
+
+# get_arg(1,4,6,7,3,7)
+
+# print()
+# -------**kwargs start--------
+# def get_address(**address):
+#     for keys,values in address.items():
+#         print(keys,values)
+
+# get_address(state="Monaco", street= "101", Home="Yupp")
+
+# def analytic(*args,**kwargs):
+#     print(args,kwargs) 
+#     for x in kwargs.keys():
+#         print(x)
+
+# analytic(
+#     "Engr","Narendra Sharma",
+#     intro= "Fighter",
+#     proficiency = "KO specialists"
+# )# # 🔴
+
+#Iterables = An object that can return its element ine at a time.🟢
+#.           allowing it to be iterated over in a for loop
+
+# nums = [1,2,3,4,5,6,7,8,9]
+# for num in reversed(nums):
+#     print(num, end= " ")
+# tuples = (1,2,3,4,5,6,7,8,9)
+# for tups in reversed(tuples):
+#     print(tups)
+# sets = {1,2,3,4,5,6,7,8,9,0}
+# for set in sets:
+#     print(set)
+
+# dict = {"a":1,"b":2,"c":3}
+# for key in dict.values():
+#     print(key)🔴
 
