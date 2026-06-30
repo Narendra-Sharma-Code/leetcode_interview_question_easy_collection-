@@ -738,3 +738,90 @@ color = {"Red", "Green", "Blue", "Yellow"}
 # for key in dict.values():
 #     print(key)🔴
 
+#membership operator = used to test if a sequence is presented in a value or variable.🟢
+# in = returns True if a sequence with the specified value is present in the object
+# not in = returns True if a sequence with the specified value is not present in the object
+
+# str1 = "Bro Code"
+# str2 = input("Enter your name to check if u r eligible:")
+# if str2 in str1:
+#     print(f"{str2} is elegible for taking part")
+# else:
+#     print("You are not elegible")
+
+# fruits = {"Apple","Bannana","Cherry", "Kiwi","Carrot"}
+# fruit = input("Guess a fruit which is in basket: ")
+# if fruit not in fruits:
+#     print(f"{fruit} is not the basket")
+# else:
+#     print(f"You picked correct {fruit} is in the basket! ")
+
+# students_info = {
+#     "Harsh": "B",
+#     "Aditya":"-F",
+#     "Shivam":"A",
+#     "Anjali":"A++"
+# }
+# student =input("Enter your name to check grade: ")
+# if student in students_info:
+#     print(f"{student} grade is {students_info[student]}")
+# else:
+#     print(f"{student} detail is not generated")
+# 🔴
+
+#List Comprehension = a way to create a new list with less syntax.🟢
+#compact and easy to read 
+#[expression for value in iterable if condition]
+
+# double=[].  | traditional way
+# for x in range(1,11):
+#     double.append(x*2)
+# print(double)
+
+# double = [x * 2 for x in range(1,11)]    | list expression
+# print(double)
+
+# electronics = ["laptop","desktop","mobile","tablet"]
+# electronics = [electronic.upper() for electronic in electronics]
+# electronics = [electronic[0] for electronic in electronics]
+# print(electronics)
+
+# numbers = [1,-2,3,-4,5,-6,-7,8,-9]
+# positive_nums = [num for num in numbers if num >=0]
+# negative_nums = [num for num in numbers if num <0]
+# even_nums = [num for num in numbers if num % 2 == 0]
+# odd_nums = [num for num in numbers if num % 2 == 1]
+# print(odd_nums)
+
+#Match- Case Statement(switch statement)🟢:
+# An alternative to using multiple 'elif statements' in Python 3.10 and above
+# def day_of_week(day): 
+#     match day:
+#         case 1|2|3|4|5:
+#             print("It's Week Day")
+#         case 6|7:
+#             print("WOOO It's Weekend Babyy!!")
+#         case _:
+#             print("Invalid Day")
+# print(day_of_week("Monday"))
+# 🔴
+
+#Modules = a file containing code you want to include in program🟢
+#use 'import' to include a module(built-in or custom) in your program
+#useful for organizing code into manageable sections and reusing code across multiple programs
+# import modules
+
+# print(math.pi)
+# print(math.e)
+# print(math.tau)
+
+# example = modules.square(5,6)
+# print(example)
+
+# result = modules.circumference(4)
+# print(result)
+# 🔴
+
+
+
+    
