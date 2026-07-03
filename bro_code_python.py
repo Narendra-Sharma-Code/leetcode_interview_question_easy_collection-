@@ -821,7 +821,3 @@ color = {"Red", "Green", "Blue", "Yellow"}
 # result = modules.circumference(4)
 # print(result)
 # 🔴
-
-
-
-    
