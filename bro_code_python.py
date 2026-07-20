@@ -381,9 +381,9 @@ z = 36
     #Tuple(): ordered and unchangeable. Duplicates OK. Faster
     # Dictionary: ordered and changeable || don't know about this yet
 # List[]🟢
-# car = ["BMW", "Toyota", "Honda", "Mercedes"]
-# print(car[3]).  || [start:stop:end]
-
+# car = ["BMW", "Toyota", "Honda", "Mercedes","Lexus"]
+# print(car[3]).  || [start:stop:step]
+# print(car)
 # for x in car:
 #     print(x) 
 
@@ -401,20 +401,24 @@ z = 36
 # List[] end🔴
 
 # set{}🟢
-color = {"Red", "Green", "Blue", "Yellow"}
+# color = {"Red", "Green", "Blue", "Yellow"}
 # color.pop()
 # color.remove("Red")
 # color.add("grey")
+# print(list(color)[0])
+# print(type(color))
+
 # color.add("Red")
 # print("grey" in color)
 # print(color)
 # set{}end🔴
 
 #tuple()🟢
-# game = ("cricket", "football", "basketball", "durby")
+game = ("cricket", "football", "basketball", "durby")
 # print(dir(game))
 # print(help(game))
-# print(game.index("football"))
+print(game.index("football"))
+print(game[0])
 # print(game.count("football"))
 
 #Shopping cart program
@@ -795,15 +799,15 @@ color = {"Red", "Green", "Blue", "Yellow"}
 
 #Match- Case Statement(switch statement)🟢:
 # An alternative to using multiple 'elif statements' in Python 3.10 and above
-# def day_of_week(day): 
-#     match day:
-#         case 1|2|3|4|5:
-#             print("It's Week Day")
-#         case 6|7:
-#             print("WOOO It's Weekend Babyy!!")
-#         case _:
-#             print("Invalid Day")
-# print(day_of_week("Monday"))
+def day_of_week(day): 
+    match day:
+        case 1|2|3|4|5:
+            print("It's Week Day")
+        case 6|7:
+            print("WOOO It's Weekend Babyy!!")
+        case _:
+            print("Invalid Day")
+print(day_of_week("Monday"))
 # 🔴
 
 #Modules = a file containing code you want to include in program🟢
@@ -821,3 +825,65 @@ color = {"Red", "Green", "Blue", "Yellow"}
 # result = modules.circumference(4)
 # print(result)
 # 🔴
+
+#variable scope = where a variable is visible and accessible 
+#scope resolution = LEGB rule
+# L = Local, E = Enclosing function locals, G = Global, B = Built-in scope
+# local variable = a variable declared inside a function and can only be accessed inside that function
+# global variable = a variable declared outside a function and can be accessed anywhere in the program      
+
+#python Banking program
+# def show_balance(balance):
+#     print("**************************")
+#     print(f"Your Balance is {balance:.2f}")
+# def deposit():
+#     amount = float(input("Enter Deposit Amount: "))
+#     if amount <= 0:
+#         print("Invalid amount")
+#     else: return amount
+# def withdraw(balance):
+#     withdraw = float(input("Enter Withdraw amount: "))
+#     if withdraw > balance:
+#         print("**************************")
+#         print("Insufficient Balance")
+#         return 0
+#     elif withdraw <= 0:
+#         print("**************************")
+#         print("InValid withdrawal amount")
+#         return 0
+#     else: return withdraw
+
+# def main():
+#     balance = 0
+#     is_running = True
+
+#     while is_running:
+#         print("**************************")
+#         print("Welcome To Python Bank")
+#         print("1. Show Balance")
+#         print("2. Deposit Amount")
+#         print("3. Withdraw Amount")
+#         print("4. Exit")
+#         print("**************************")
+
+
+#         choice = input("Enter Your Choice(1-4): ")
+#         print("**************************")
+
+#         if choice == "1":
+#             show_balance(balance)
+#         elif choice == "2":
+#             balance += deposit()
+#         elif choice == "3":
+#             balance -= withdraw(balance)
+#         elif choice == "4":
+#             is_running = False
+#         else:
+#             print("Invalid Choice") 
+#     print("**************************") 
+#     print("Thanks for using Python Bank, see you next time!!")  
+
+
+
+# if __name__ == '__main__':
+#     main()
