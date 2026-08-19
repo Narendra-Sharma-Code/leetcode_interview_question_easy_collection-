@@ -12,3 +12,12 @@ def greet():
     greet()
 
 # greet()
+
+def task():
+    global count
+    print(count)
+    count += 1
+    if count >= 11:
+        return 
+    task()
+task()
