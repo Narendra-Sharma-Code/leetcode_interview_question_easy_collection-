@@ -30,3 +30,8 @@ y = 3
 print(m.ceil(x))
 print(m.fabs(x))
 print(m.pow(y,2))
+
+from calculator.calc import *
+
+result = add(34,78)
+print(f"result : {result}")
