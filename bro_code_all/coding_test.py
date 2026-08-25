@@ -150,7 +150,7 @@ print(frequency("banana"))
 # multiply
 # divide
 # Create another Python file that imports the module and performs all four operations.
-from calculator import add, subtract, multiply, divide
+from bro_code_all.calculator import add, subtract, multiply, divide
 
 print(add(5, 3))
 print(subtract(5, 3))
